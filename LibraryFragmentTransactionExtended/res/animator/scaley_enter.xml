@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Hacemos transparente el fragment que entra hasta que acaba la animación del que sale -->
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="alpha"
+        android:valueFrom="1.0"
+        android:valueTo="0.0" />
+
+    <!-- Escalamos el fragment que entra -->
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="scaleY"
+        android:startOffset="300"
+        android:valueFrom="0.0"
+        android:valueTo="1.0"
+        android:valueType="floatType" />
+
+    <!--
+        Hacemos visible el fragment que entra a la vez que se escala
+    	empezamos en startOffset="300" para dar tiempo a que salga el otro fragment
+    -->
+    <objectAnimator
+        android:duration="1"
+        android:propertyName="alpha"
+        android:startOffset="300"
+        android:valueFrom="0.0"
+        android:valueTo="1.0" />
+
+</set>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_spinner">
+        <item>SCALEX</item>
+        <item>SCALEY</item>
+        <item>SCALEXY</item>
+        <item>FADE</item>
+        <item>FLIP_HORIZONTAL</item>
+        <item>FLIP_VERTICAL</item>
+        <item>SLIDE_VERTICAL</item>
+        <item>SLIDE_HORIZONTAL</item>
+        <item>SLIDE_HORIZONTAL_PUSH_TOP</item>
+        <item>SLIDE_VERTICAL_PUSH_LEFT</item>
+        <item>GLIDE</item>
+        <item>SLIDING</item>
+        <item>STACK</item>
+        <item>CUBE</item>
+        <item>ROTATE_DOWN</item>
+        <item>ROTATE_UP</item>
+        <item>ACCORDION</item>
+        <item>TABLE_HORIZONTAL</item>
+        <item>TABLE_VERTICAL</item>
+    </string-array>
+</resources>
