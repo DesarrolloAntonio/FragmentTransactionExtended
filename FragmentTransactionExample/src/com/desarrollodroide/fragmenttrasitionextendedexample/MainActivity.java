@@ -16,7 +16,6 @@ import android.widget.Spinner;
 
 
 public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener{
-
     private int optionSelected = 0;
     private SlidingListFragmentLeft mFirstFragment;
 

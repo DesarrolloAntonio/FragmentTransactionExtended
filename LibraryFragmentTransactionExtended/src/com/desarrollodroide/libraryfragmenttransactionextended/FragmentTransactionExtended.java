@@ -178,7 +178,6 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
         mFragmentTransaction.setCustomAnimations(R.animator.table_vertical_right_in, R.animator.table_vertical_left_out, R.animator.table_vertical_left_int, R.animator.table_vertical_right_out);
     }
 
-
     private void transitionFlipHorizontal() {
         mFragmentTransaction.setCustomAnimations(R.animator.card_flip_horizontal_right_in, R.animator.card_flip_horizontal_left_out, R.animator.card_flip_horizontal_left_in, R.animator.card_flip_horizontal_right_out);
     }
