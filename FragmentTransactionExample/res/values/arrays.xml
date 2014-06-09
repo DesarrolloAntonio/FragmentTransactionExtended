@@ -20,5 +20,6 @@
         <item>ACCORDION</item>
         <item>TABLE_HORIZONTAL</item>
         <item>TABLE_VERTICAL</item>
+        <item>ZOOM_FROM_CORNER</item>
     </string-array>
 </resources>
