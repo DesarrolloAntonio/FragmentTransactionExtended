@@ -2,7 +2,7 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android" >
     <objectAnimator
         android:duration="700"
-        android:propertyName="tableVerticalPivotWidth"
+        android:propertyName="tableVerticalPivotHeight"
         android:valueFrom="0"
         android:valueTo="1"
         android:valueType="floatType" />

@@ -144,7 +144,7 @@ public class SlidingRelativeLayout extends RelativeLayout {
         setPivotY(0);
     }
 
-    public void setTableVerticalPivotWidth(float fraction) {
+    public void setTableVerticalPivotHeight(float fraction) {
         setRotationX(90 * fraction);
         setPivotX(getWidth()/2);
         setPivotY(getHeight());
