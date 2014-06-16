@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="array_spinner">
         <item>SCALEX</item>
         <item>SCALEY</item>
@@ -20,6 +21,8 @@
         <item>ACCORDION</item>
         <item>TABLE_HORIZONTAL</item>
         <item>TABLE_VERTICAL</item>
-        <item>ZOOM_FROM_CORNER</item>
+        <item>ZOOM_FROM_LEFT_CORNER</item>
+        <item>ZOOM_FROM_RIGHT_CORNER</item>
     </string-array>
+
 </resources>

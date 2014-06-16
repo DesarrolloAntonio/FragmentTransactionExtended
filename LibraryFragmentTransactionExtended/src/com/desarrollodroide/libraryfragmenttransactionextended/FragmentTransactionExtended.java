@@ -42,7 +42,9 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     public static final int ACCORDION = 16;
     public static final int TABLE_HORIZONTAL = 17;
     public static final int TABLE_VERTICAL = 18;
-    public static final int ZOOM_FROM_CORNER = 19;
+    public static final int ZOOM_FROM_LEFT_CORNER = 19;
+    public static final int ZOOM_FROM_RIGHT_CORNER = 20;
+
 
 
     public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID) {
@@ -112,8 +114,11 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
             case TABLE_VERTICAL:
                 transitionTableVertical();
                 break;
-            case ZOOM_FROM_CORNER:
-            	transitionZoomFromCorner();
+            case ZOOM_FROM_LEFT_CORNER:
+            	transitionZoomFromLeftCorner();
+                break;
+            case ZOOM_FROM_RIGHT_CORNER:
+            	transitionZoomFromRightCorner();
                 break;
         }
         mFragmentTransaction.replace(mContainerID, mSecondFragment);
@@ -190,8 +195,12 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
         mFragmentTransaction.setCustomAnimations(R.animator.card_flip_vertical_right_in, R.animator.card_flip_vertical_left_out, R.animator.card_flip_vertical_left_in, R.animator.card_flip_vertical_right_out);
     }
     
-    private void transitionZoomFromCorner() {
-        mFragmentTransaction.setCustomAnimations(R.animator.zoom_from_corner_right_in, R.animator.zoom_from_corner_left_out, R.animator.zoom_from_corner_left_in, R.animator.zoom_from_corner_right_out);
+    private void transitionZoomFromLeftCorner() {
+        mFragmentTransaction.setCustomAnimations(R.animator.zoom_from_left_corner_right_in, R.animator.zoom_from_left_corner_left_out, R.animator.zoom_from_left_corner_left_in, R.animator.zoom_from_left_corner_right_out);
+    }
+    
+    private void transitionZoomFromRightCorner() {
+        mFragmentTransaction.setCustomAnimations(R.animator.zoom_from_right_corner_right_in, R.animator.zoom_from_right_corner_left_out, R.animator.zoom_from_right_corner_left_in, R.animator.zoom_from_right_corner_right_out);
     }
 
 

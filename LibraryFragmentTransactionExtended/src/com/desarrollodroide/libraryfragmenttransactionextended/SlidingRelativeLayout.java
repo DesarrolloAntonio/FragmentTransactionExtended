@@ -163,4 +163,18 @@ public class SlidingRelativeLayout extends RelativeLayout {
         setPivotX(0);
         setPivotY(0);
     }
+    
+    public void setZoomFromCornerPivotWidth(float fraction) {
+        setScaleX(fraction);
+        setScaleY(fraction);
+        setPivotX(getWidth());
+        setPivotY(0);
+    }
+    
+    public void setZoomFromCornerPivotHeight(float fraction) {
+        setScaleX(fraction);
+        setScaleY(fraction);
+        setPivotX(0);
+        setPivotY(getHeight());
+    }
 }
