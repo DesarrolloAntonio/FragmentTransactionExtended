@@ -23,6 +23,8 @@
         <item>TABLE_VERTICAL</item>
         <item>ZOOM_FROM_LEFT_CORNER</item>
         <item>ZOOM_FROM_RIGHT_CORNER</item>
+        <item>ZOOM_SLIDE_HORIZONTAL</item>
+        <item>ZOOM_SLIDE_VERTICAL</item>
     </string-array>
 
 </resources>

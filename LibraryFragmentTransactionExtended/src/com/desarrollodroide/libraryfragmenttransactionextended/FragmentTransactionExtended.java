@@ -44,8 +44,8 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     public static final int TABLE_VERTICAL = 18;
     public static final int ZOOM_FROM_LEFT_CORNER = 19;
     public static final int ZOOM_FROM_RIGHT_CORNER = 20;
-
-
+    public static final int ZOOM_SLIDE_HORIZONTAL = 21;
+    public static final int ZOOM_SLIDE_VERTICAL = 22;
 
     public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID) {
         this.mFragmentTransaction = fragmentTransaction;
@@ -119,6 +119,12 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
                 break;
             case ZOOM_FROM_RIGHT_CORNER:
             	transitionZoomFromRightCorner();
+                break;
+            case ZOOM_SLIDE_HORIZONTAL:
+            	transitionZoomSlideHorizontal();
+                break;
+            case ZOOM_SLIDE_VERTICAL:
+            	transitionZoomSlideVertical();
                 break;
         }
         mFragmentTransaction.replace(mContainerID, mSecondFragment);
@@ -201,6 +207,14 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     
     private void transitionZoomFromRightCorner() {
         mFragmentTransaction.setCustomAnimations(R.animator.zoom_from_right_corner_right_in, R.animator.zoom_from_right_corner_left_out, R.animator.zoom_from_right_corner_left_in, R.animator.zoom_from_right_corner_right_out);
+    }
+    
+    private void transitionZoomSlideHorizontal() {
+        mFragmentTransaction.setCustomAnimations(R.animator.zoom_slide_horizontal_tablet_right_in, R.animator.zoom_slide_horizontal_left_out, R.animator.zoom_slide_horizontal_tablet_left_in, R.animator.zoom_slide_horizontal_right_out);
+    }
+    
+    private void transitionZoomSlideVertical() {
+        mFragmentTransaction.setCustomAnimations(R.animator.zoom_slide_vertical_tablet_right_in, R.animator.zoom_slide_vertical_left_out, R.animator.zoom_slide_vertical_tablet_left_in, R.animator.zoom_slide_vertical_right_out);
     }
 
 
