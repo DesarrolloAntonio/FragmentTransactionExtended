@@ -90,6 +90,10 @@ Special Thanks
 -----
 * Daniel Olshansky. - From DevBytes [Sliding Fragments][1].
 
+Android Studio
+-----
+* Download the version compiled with android studio [FragmentTransactionExtended_For_AndroidStudio][2].
+ 
 Developed By
 ============
 
@@ -114,5 +118,4 @@ Copyright 2014 Antonio Corrales
     limitations under the License.
 
  [1]: https://plus.google.com/+AndroidDevelopers/posts/PcFbxqa55e4
-
-
+ [2]: https://github.com/DesarrolloAntonio/FragmentTransactionExtended_For_AndroidStudio
