@@ -23,6 +23,7 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     private Fragment mFirstFragment, mSecondFragment;
     private int mContainerID;
     private int mTransitionType;
+	private boolean mUseBackStack;
     public static final int SCALEX = 0;
     public static final int SCALEY = 1;
     public static final int SCALEXY = 2;
@@ -47,15 +48,21 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     public static final int ZOOM_SLIDE_HORIZONTAL = 21;
     public static final int ZOOM_SLIDE_VERTICAL = 22;
 
-    public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID) {
+    public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID, boolean useBackstack) {
         this.mFragmentTransaction = fragmentTransaction;
         this.mContext = context;
         this.mFirstFragment = firstFragment;
         this.mSecondFragment = secondFragment;
         this.mContainerID = containerID;
+		this.mUseBackStack = useBackstack;
     }
 
-    public void addTransition(int transitionType) {
+	public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID) {
+		new FragmentTransactionExtended(context, fragmentTransaction, firstFragment, secondFragment, containerID, true);
+	}
+
+
+		public void addTransition(int transitionType) {
         this.mTransitionType = transitionType;
         switch (transitionType) {
             case SCALEX:
@@ -235,7 +242,8 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
                 public void onAnimationEnd(Animator arg0) {
                     mFragmentTransaction.setCustomAnimations(R.animator.slide_fragment_in, 0, 0, R.animator.slide_fragment_out);
                     mFragmentTransaction.add(mContainerID, mSecondFragment);
-                    mFragmentTransaction.addToBackStack(null);
+					if (mUseBackStack)
+	                    mFragmentTransaction.addToBackStack(null);
                     mFragmentTransaction.commit();
                 }
             };
@@ -295,7 +303,8 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
                 switchFragments();
                 break;
             default:
-                mFragmentTransaction.addToBackStack(null);
+				if (mUseBackStack)
+	                mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
                 break;
         }
