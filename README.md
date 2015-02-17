@@ -1,4 +1,4 @@
-FragmentTransactionExtended (AndroidStudio compat)
+FragmentTransactionExtended
 ===========================
 
 ![Logo](fragmentTransactionExample/cap1.gif)   ![Logo](fragmentTransactionExample/cap2.gif)
