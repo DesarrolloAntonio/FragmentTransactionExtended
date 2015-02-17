@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="zoomFromCornerPivotWidth"
+        android:startOffset="300"
+        android:valueFrom="0.0"
+        android:valueTo="1.0"
+        android:valueType="floatType" />
+    
+</set><!-- From: file:/home/myubuntu/AndroidStudioProjects/FragmentTransactionExtended_ASCompat/libraryFragmentTransactionExtended/src/main/res/animator/zoom_from_right_corner_right_in.xml -->

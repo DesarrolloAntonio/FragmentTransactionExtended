@@ -1,0 +1,2 @@
+include ':libraryFragmentTransactionExtended'
+include ':fragmentTransactionExample'

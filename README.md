@@ -1,7 +1,7 @@
-FragmentTransactionExtended
+FragmentTransactionExtended (AndroidStudio compat)
 ===========================
 
-![Logo](FragmentTransactionExample/cap1.gif)   ![Logo](FragmentTransactionExample/cap2.gif)
+![Logo](fragmentTransactionExample/cap1.gif)   ![Logo](fragmentTransactionExample/cap2.gif)
 
 `FragmentTransactionExtended` is a library which provide us a set of custom animations between fragments. 
 `FragmentTransaction` only accepts some simple animations (TRANSIT_FRAGMENT_CLOSE, TRANSIT_FRAGMENT_FADE, TRANSIT_FRAGMENT_OPEN...). 
@@ -83,17 +83,15 @@ FragmentTransactionExtended fragmentTransactionExtended = new FragmentTransactio
 fragmentTransactionExtended.addTransition(FragmentTransactionExtended.GLIDE);
 fragmentTransactionExtended.commit();
 ```
-
+Gradle
+-----
+* Coming soon.
 
 
 Special Thanks
 -----
 * Daniel Olshansky. - From DevBytes [Sliding Fragments][1].
 
-Android Studio
------
-* Download the version compiled with android studio [FragmentTransactionExtended_For_AndroidStudio][2].
- 
 Developed By
 ============
 
@@ -118,4 +116,5 @@ Copyright 2014 Antonio Corrales
     limitations under the License.
 
  [1]: https://plus.google.com/+AndroidDevelopers/posts/PcFbxqa55e4
- [2]: https://github.com/DesarrolloAntonio/FragmentTransactionExtended_For_AndroidStudio
+
+
