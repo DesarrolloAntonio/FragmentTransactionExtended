@@ -85,8 +85,11 @@ fragmentTransactionExtended.commit();
 ```
 Gradle
 -----
-* Coming soon.
-
+```java
+dependencies {
+    compile 'com.desarrollodroide:fragmenttransactionextended:1'
+}
+```
 
 Special Thanks
 -----
