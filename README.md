@@ -79,7 +79,7 @@ Example:
 ```java
 FragmentManager fm = getFragmentManager();
 FragmentTransaction fragmentTransaction = fm.beginTransaction();
-FragmentTransactionExtended fragmentTransactionExtended = new FragmentTransactionExtended(this, fragmentTransaction, firstFragment, secondFragment, R.id.fragment_place);
+FragmentTransactionExtended fragmentTransactionExtended = new FragmentTransactionExtended(this, fragmentTransaction, firstFragment, secondFragment, R.id.fragment_place, tag);
 fragmentTransactionExtended.addTransition(FragmentTransactionExtended.GLIDE);
 fragmentTransactionExtended.commit();
 ```
