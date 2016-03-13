@@ -23,6 +23,7 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
     private Fragment mFirstFragment, mSecondFragment;
     private int mContainerID;
     private int mTransitionType;
+    private String mTag;
     public static final int SCALEX = 0;
     public static final int SCALEY = 1;
     public static final int SCALEXY = 2;
@@ -53,6 +54,16 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
         this.mFirstFragment = firstFragment;
         this.mSecondFragment = secondFragment;
         this.mContainerID = containerID;
+        this.mTag = null;
+    }
+
+    public FragmentTransactionExtended(Context context, FragmentTransaction fragmentTransaction, Fragment firstFragment, Fragment secondFragment, int containerID, String tag) {
+        this.mFragmentTransaction = fragmentTransaction;
+        this.mContext = context;
+        this.mFirstFragment = firstFragment;
+        this.mSecondFragment = secondFragment;
+        this.mContainerID = containerID;
+        this.mTag = tag;
     }
 
     public void addTransition(int transitionType) {
@@ -234,7 +245,7 @@ public class FragmentTransactionExtended implements FragmentManager.OnBackStackC
                 @Override
                 public void onAnimationEnd(Animator arg0) {
                     mFragmentTransaction.setCustomAnimations(R.animator.slide_fragment_in, 0, 0, R.animator.slide_fragment_out);
-                    mFragmentTransaction.add(mContainerID, mSecondFragment);
+                    mFragmentTransaction.add(mContainerID, mSecondFragment, mTag);
                     mFragmentTransaction.addToBackStack(null);
                     mFragmentTransaction.commit();
                 }
